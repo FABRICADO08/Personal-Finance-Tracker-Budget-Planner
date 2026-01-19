@@ -29,10 +29,10 @@ jobs:
           push: true
           # Tags the image with 'latest' and the specific commit SHA
           tags: |
-            ${{ secrets.DOCKER_HUB_USERNAME }}/mendix-app:latest
-            ${{ secrets.DOCKER_HUB_USERNAME }}/mendix-app:${{ github.sha }}
+            ${{ secrets.DOCKER_HUB_USERNAME }}/personalplennerbudgettracker:latest
+            ${{ secrets.DOCKER_HUB_USERNAME }}/personalplennerbudgettracker:${{ github.sha }}
           
           # Mendix Buildpack specific build arguments
           build-args: |
             BUILD_PATH=./  
-            PROJECT_FILE=YourProjectName.mpr
+            PROJECT_FILE=App.mpr
